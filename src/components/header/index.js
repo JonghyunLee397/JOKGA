@@ -15,7 +15,7 @@ const Header = () => {
       <Navbar bg='white' variant='navbar' expand='lg' className='navbar'>
         <NavbarBrand href="/"><img src={picture} alt='Jok Ga A Dong Chim' className='picture'/></NavbarBrand>
         <Nav variant='tabs' justify={true} fill={true}>
-          <NavLink href='/menu'>Menu</NavLink>
+          <NavLink href='/menu'>Menu-test</NavLink>
           <NavLink>About Us</NavLink>
         </Nav>
       </Navbar>
