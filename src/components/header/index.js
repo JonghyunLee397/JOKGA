@@ -1,5 +1,10 @@
 import React from 'react';
-import { Navbar, NavbarBrand, Nav, NavLink } from 'react-bootstrap';
+import { 
+  Navbar, 
+  NavbarBrand, 
+  Nav, 
+  NavLink 
+} from 'react-bootstrap';
 import { Paper } from '@material-ui/core'
 import picture from './logo.jpg'
 import './style.scss'
@@ -13,7 +18,7 @@ const Header = () => {
         square
       >
       <Navbar bg='white' variant='navbar' expand='lg' className='navbar'>
-        <NavbarBrand href="/"><img src={picture} alt='Jok Ga A Dong Chim' className='picture'/></NavbarBrand>
+        <NavbarBrand href="/"><img src={picture} alt='Jok Ga A Dong Chim' className='logo-picture'/></NavbarBrand>
         <Nav variant='tabs' justify={true} fill={true}>
           <NavLink href='/menu'>Menu</NavLink>
           <NavLink>About Us</NavLink>
