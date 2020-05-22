@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from 'react-bootstrap';
 import { IoMdArrowForward } from 'react-icons/io'
 import ImageCarousel from './carousel';
