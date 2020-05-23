@@ -8,8 +8,10 @@ import Home from './components/home';
 import Menu from './components/menu';
 import Header from './components/header';
 import Footer from './components/footer';
+import FloatingAction from './components/floating-action';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './style.scss'
 
 function App() {
   return (
@@ -55,6 +57,7 @@ function App() {
             <Footer />
           </footer>
         </div>
+        <FloatingAction />
       </Router>
     </div>
   );
