@@ -1,31 +1,16 @@
 import React, { useState } from 'react';
-import { Browserouter as Router, Link } from 'react-router-dom'
 import {
   List,
   ListItem,
-  ListItemIcon,
   ListItemText,
-  Divider,
-  Inbox,
-  Drafts
+  Divider
 } from '@material-ui/core'
-import { Route } from 'react-router-dom';
-import Trotters from './trotters'
-const Menu1 = ({match}) => {
-  return(
-    <div>
-    {match.params.item}
-    </div>
-  )
-}
-
-
-
+import MenuItemFormat from './components/components'
+import './items.scss'
 const Menu = () => {
-  const [index, setIndex] = useState("");
+  const [index, setIndex] = useState("trotters");
 
   const menuclickhandler = (name) =>{
-    console.log(name)
     setIndex(name);
   }
   return (
@@ -58,14 +43,12 @@ const Menu = () => {
       </ListItem>
       <Divider/>
       </List>
-      <Route path="/menu/:item" component={Menu1}>
-      </Route>
       </div>
-      <div style={{display:'flex', flex: 1, alignItems:'center', width:'70%'}}>
-        {index === 'trotters' && <Trotters/>}
-        {index === 'bossam' && <div> bossam </div>}
-        {index === 'set' && <div> set </div>}
-        {index === 'side' && <div> side </div>}
+      <div style={{display:'flex', flex: 1, flexWrap:'wrap', width:"70%"}}>
+        {index === 'trotters' && <MenuItemFormat formatValue={1}/>}
+        {index === 'bossam' && <MenuItemFormat formatValue={2}/>}
+        {index === 'set' && <MenuItemFormat formatValue={3}/>}
+        {index === 'side' && <MenuItemFormat formatValue={4}/>}
         </div>
     </div>
   )
