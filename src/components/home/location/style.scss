@@ -1,0 +1,45 @@
+.location-container {
+  font-family: 'East Sea Dokdo', cursive;
+}
+
+.location-container h1 {
+  margin-top: 4%;
+  margin-bottom: 2%;
+  font-size: 650%;
+}
+
+.location-container h2 {
+  font-size: 400%;
+}
+
+.location-container .jumbotron {
+  background-color: hsla(0, 0%, 19%, 0.068);
+  width: 50%;
+}
+
+.location-container li {
+  list-style: none;
+  font-size: 150%;
+  text-align: left;
+}
+
+.location-container ul {
+  padding: 0;
+}
+
+.location-container p {
+  font-size: 150%;
+  text-align: left;
+}
+
+.location-container .address {
+  margin: 0
+}
+
+.location-container .copy-icon {
+  color: #243d9d;
+}
+
+.location-container .copy-icon:hover {
+  color: #2a49b836;
+}
