@@ -2,36 +2,69 @@ import React from 'react'
 import Jokbal from '../menuitems/jokbal'
 import { Paper } from '@material-ui/core'
 import Bossam from '../menuitems/bossam'
+import sideMenu from '../menuitems/sideMenu'
+import setMenu from '../menuitems/setMenu'
 import '../items.scss'
+import './components.scss'
+import { Button } from 'react-bootstrap';
+import {
+    GridList,
+    GridListTile,
+    Modal,
+    Backdrop,
+    Fade
+} from '@material-ui/core'
 
 const MenuItemFormat = (props) =>{
-    console.log(props)
     const { formatValue } = props
+    const [open, setOpen] = React.useState(false);
+
+    const handleOpen = () => {
+        setOpen(true);
+    }
+    const handleClose = () => {
+        setOpen(false);
+    }
     return(
-        <div style={{
-            fontFamily: 'East Sea Dokdo, cursive',
-            fontWeight: 'bold',
-            display: 'flex',
-            flexDirection:'column',
-            flex: 1,
-            alignItems:'center'
-          }} >
+        <div className="menuGrid">
+        <div className="Grid">
         {formatValue === 1 && Jokbal.map((element, index) => {
             return ( 
             <React.Fragment key={index}>
-            <Paper style={{display:'flex', flexDirection:'row',margin:'20px', width:'70%'}}>
-             <img className="pic" src={element.img}></img>
-             <div style={{display:'flex', flexDirection:'column', justifyContent:'center'}}>
-             <p style={{fontSize:'250%', fontFamily:'Yeon Sung, cursive'}}>{element.name}</p>
-             <p className="largefont">Small: ${element.priceS}</p>
-             <p className="largefont">Medium: ${element.priceM}</p>
-             <p className="largefont">Large: ${element.priceL}</p>
-             <p className="smallfont">{element.description}</p>
-             </div>
-             </Paper>
+                <GridList>
+                    <GridListTile style={{height:'100%', width:'100%'}} key={element.img}>
+                        <div className='pic-container'>
+                            <img src={element.img} alt={element.name}/>
+                            <div className='pic-overlay text'>{element.name}</div>
+                            <div>
+                            <Button variant='secondary' className='pic-overlay button' onClick={handleOpen}>
+                                 <div className='button-text'>
+                                     주문하기
+                                 </div>
+                            </Button>
+                            <Modal
+                                open={open}
+                                onClose={handleClose}
+                                closeAfterTransition
+                                BackdropComponent={Backdrop}
+                                BackdropProps={{
+                                  timeout: 500,
+                                }}
+                            >
+                                <Fade in={open}>
+                                    <div>
+                                   <h2>주문하기</h2>
+                                    </div>
+                                </Fade>
+                            </Modal>
+                            </div>
+                        </div>    
+                    </GridListTile>
+                </GridList>
              </React.Fragment>
              )
          })}
+         </div>
          {formatValue === 2 && Bossam.map((element, index) => {
             return ( 
             <React.Fragment key={index}>
@@ -46,7 +79,7 @@ const MenuItemFormat = (props) =>{
              </React.Fragment>
              )
          })}
-         {formatValue === 3 && Jokbal.map((element, index) => {
+         {formatValue === 3 && Bossam.map((element, index) => {
             return ( 
             <React.Fragment key={index}>
             <Paper style={{display:'flex', flexDirection:'row',margin:'20px', width:'70%'}}>

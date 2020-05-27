@@ -27,3 +27,63 @@
     font-size: 130%;
     font-family: 'Yeon Sung', cursive;
 }
+.menuBar{
+    margin-top: 2%; 
+    display: flex; 
+    flex-direction: column; 
+    flex-wrap: wrap; 
+    justify-items: center;
+    width: 100%
+}
+.myTab{
+    width: 100%;
+    color: black;
+    justify-content: center;
+    margin-top: 5%;
+    color: black;
+}
+.myTab a{
+    color: black;
+    font-weight: bold;
+}
+.myTab a:hover{
+    color: black;
+}
+.container{
+        display: flex;
+        flex-direction: row;
+        align-content: stretch;
+        height: 100%;
+        flex: 1;
+        min-height: 100%;
+        font-family: 'Yeon Sung', cursive;
+        justify-content: center;
+        margin:'0'
+}
+.menuGrid{
+    font-family: 'East Sea Dokdo', cursive;
+    font-weight: 'bold';
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    height: 80%;
+    width: 100%;
+}
+.Grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: hidden;
+    margin-top: 4%;
+    width: 80%;
+    height: 90%;
+}
+.Grid ul{
+    width: 50%;
+    height: 50%;
+}
+.Grid li img{
+    height: 100%;
+    width: 100%;
+}
+

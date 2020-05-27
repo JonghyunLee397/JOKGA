@@ -1,0 +1,59 @@
+.pic-container {
+  position: relative;
+  height: 100%;
+}
+
+.pic-container img {
+  display: block;
+}
+
+.pic-container .pic-overlay {
+  display: block;
+  z-index: 2;
+}
+
+.pic-container .text{
+  position: absolute;
+  top: 2%;
+  left: 3%;
+  color: #ffffff;
+  font-family: 'East Sea Dokdo', cursive;
+  font-size: 20px;
+}
+
+.pic-container .button {
+  position: absolute;
+  top: 14%;
+  left: 1%;
+  font-family: 'East Sea Dokdo', cursive;
+  font-size: 20px;
+  background-color:rgba(56, 46, 46, 0.253);
+}
+
+.pic-container .button:hover {
+  background-color: rgba(56, 46, 46, 0.5);
+}
+
+.pic-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: rgba(0,0,0, 0.5);
+}
+
+.pic-container .button-text:hover {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
