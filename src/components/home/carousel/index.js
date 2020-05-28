@@ -56,7 +56,7 @@ const ImageCarousel = () => {
           <CarouselCaption
             className='caption'
           >
-            <h1>보쌈 사삼</h1>
+            <h1>test</h1>
           </CarouselCaption>
         </CarouselItem>
       </Carousel>
