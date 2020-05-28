@@ -1,0 +1,43 @@
+.promotion-container {
+  display: inline;
+}
+
+.promotion-container .jumbotron {
+  display: flex;
+  z-index: 2;
+  position: relative;
+  left: 30em;
+  top: 20em;
+  padding: 0;
+  align-items: center;
+  height: 20em;
+  width: 20em;
+}
+
+.arrow-icon {
+  font-size: 3em;
+}
+
+.arrow-icon:hover {
+  cursor: pointer;
+}
+
+.selectedIndex-container li {
+  display: inline;
+  padding-left: 2em;
+  padding-right: 2em;
+  cursor: pointer;
+}
+
+.selectedIndex-container li:first-child {
+  padding-right: 2em;
+  padding-left: 0em;
+}
+
+.selectedIndex-container .selectedIndex {
+  color: white;
+}
+
+.promotion-picture-container {
+  position: relative;
+}
