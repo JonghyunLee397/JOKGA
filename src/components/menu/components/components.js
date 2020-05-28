@@ -51,9 +51,9 @@ const MenuItemFormat = (props) =>{
                                   timeout: 500,
                                 }}
                             >
-                                <Fade in={open}>
+                             <Fade in={open} className="fadeStyle">
                                     <div>
-                                   <h2>주문하기</h2>
+                                   <Paper elevation={3} className="paperStyle">주문하기</Paper>
                                     </div>
                                 </Fade>
                             </Modal>
