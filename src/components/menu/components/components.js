@@ -4,10 +4,10 @@ import { Paper,Fab} from '@material-ui/core'
 import Bossam from '../menuitems/bossam'
 import sideMenu from '../menuitems/sideMenu'
 import setMenu from '../menuitems/setMenu'
-import { IoIosClose, IoIosCart, IoMdCart } from 'react-icons/io'
+import { IoIosClose, IoIosCart} from 'react-icons/io'
 import '../items.scss'
 import './components.scss'
-import { Button } from 'react-bootstrap';
+import { Button , DropdownButton, Dropdown } from 'react-bootstrap';
 import {
     GridList,
     GridListTile,
@@ -15,6 +15,7 @@ import {
     Backdrop,
     Fade
 } from '@material-ui/core'
+import DropdownItem from 'react-bootstrap/DropdownItem'
 
 const MenuItemFormat = (props) =>{
     const { formatValue } = props
@@ -60,10 +61,17 @@ const MenuItemFormat = (props) =>{
                                    <IoIosClose className="xButton" onClick={() => setOpen(false)}/> 
                                        <div className="imgBox">
                                            <img src={Jokbal[productIndex].img}></img>
+                                           <div className="buttons">
+                                           <DropdownButton className="dropDownContainer" title="Size" variant="secondary">
+                                               <DropdownItem eventKey="1">Small</DropdownItem>
+                                               <DropdownItem eventKey="2">Medium</DropdownItem>
+                                               <DropdownItem eventKey="3">Large</DropdownItem>
+                                           </DropdownButton>
                                            <Button variant='secondary' className="cartContainer" onClick={() => setOpen(false)}>
                                             <IoIosCart className="cart" />
-                                           <p className="cartText"> Add To Cart</p>
+                                           <p className="cartText">장바구니 담기</p>
                                            </Button>
+                                           </div>
                                        </div>
                                         <div className="textBox">
                                         <p style={{fontSize:'50pt'}}>{Jokbal[productIndex].name}</p>

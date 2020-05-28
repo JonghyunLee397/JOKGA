@@ -97,9 +97,9 @@
     justify-content:center;
     align-items: center;
     display:flex;
-    height:60%; 
-    width:60%;  
-    background-image: url(../../texture/golden.jpg);
+    height:50%; 
+    width:50%;  
+    background-image: url(../../texture/hanji.jpg);
     background-size: cover;  
 }
 body .MuiBackdrop-root{
@@ -123,7 +123,8 @@ body .MuiBackdrop-root{
     width:40%;
     height:100%;
     align-items:center;
-    top: 80px;
+    top: 40px;
+    margin-right: 3%;
 }
 .paperStyle .cartContainer{
     font-family: 'Yeon Sung', cursive;
@@ -171,6 +172,17 @@ body .MuiBackdrop-root{
 }
 .paperStyle .xButton:hover{
     cursor: pointer;
+}
+.paperStyle .buttons{
+    display: flex;
+}
+.buttons .dropDownContainer{
+    font-family: 'Yeon Sung', cursive;
+    margin-top: 5%;
+    display: flex;
+    border: 3px black solid;
+    border-radius: 10px;
+    margin-right: 2%;
 }
 
 
