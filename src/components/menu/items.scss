@@ -93,16 +93,84 @@
     height:100%;
 }
 .paperStyle{
+    position: relative;
     justify-content:center;
     align-items: center;
     display:flex;
-    height:50%; 
-    width:50%;
-    background: #fdc830; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #fdc830, #f37335); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #fdc630be, #f3743559); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;
+    height:60%; 
+    width:60%;  
+    background-image: url(../../texture/golden.jpg);
+    background-size: cover;  
 }
 body .MuiBackdrop-root{
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.4);
 }
+/*.textOverPic{
+    color: white;
+    text-transform: uppercase;
+    font-size: 100px;
+    font-weight: bold;
+    background: url(../../texture/texture3.jpg);
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-family: 'Yeon Sung', cursive;
+    justify-items: center;
+    align-content: center;
+}*/
+.paperStyle .imgBox{
+    position:relative;
+    width:40%;
+    height:100%;
+    align-items:center;
+    top: 80px;
+}
+.paperStyle .cartContainer{
+    font-family: 'Yeon Sung', cursive;
+    margin-top: 5%;
+    display: flex;
+    border: 3px black solid;
+    border-radius: 10px;
+    width: 40%;
+}
+.paperStyle .cart{
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 3%;
+}
+.paperStyle .cartText{
+    margin: 0;
+}
+.paperStyle .cartText:hover{
+    animation: bounce 1s infinite;
+}
+.paperStyle .imgBox img{
+    width: 100%;
+}
+.paperStyle .textBox{
+    font-family: 'Yeon Sung', cursive;
+    text-align: center;
+    width: 40%;
+    color: black;
+    text-shadow: -1px 1px 0 rgb(252, 250, 250), 
+                1px 1px 0 rgb(252, 250, 250), 
+                 1px -1px 0 rgb(252, 250, 250);
+}
+.paperStyle .textBox .lgFont{
+    font-size: 30pt;
+}
+.paperStyle .textBox .smFont{
+    font-size: 20pt;
+}
+.paperStyle .xButton{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5%;
+    height: 10%;
+}
+.paperStyle .xButton:hover{
+    cursor: pointer;
+}
+
 

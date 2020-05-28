@@ -3,7 +3,6 @@ import Spicy from './img/spicyJokbal.jpg'
 import Jokbalpic from './img/jokbal.jpg'
 import Cold from './img/cold.jpg'
 import BanBan from './img/banban.jpg'
-
 const Jokbal = [
     {
         img: Spicy,
@@ -11,12 +10,12 @@ const Jokbal = [
         priceS: 34.99,
         priceM: 39.99,
         priceL: 44.99,
-        description: '삶은 족발을 매운소스와 함께 직화로 구워 감칠맛을 더하고 매운맛을 좋아하시는 분들에게 강력추천드립니다',
+        description: '삶은 족발을 매운소스와 함께 직화로구워 감칠맛을 더하고 매운맛을 좋아하시는 분들에게 강력추천드립니다',
         id:1,
     },
     {
         img: Jokbalpic,
-        name: 'Mild Pig\'s Trotters',
+        name: '족발',
         priceS: 34.99,
         priceM: 39.99,
         priceL: 44.99,
@@ -25,7 +24,7 @@ const Jokbal = [
     },
     {
         img: Cold,
-        name: 'Cold Trotters',
+        name: '냉채족발',
         priceS: 34.99,
         priceM: 39.99,
         priceL: 44.99,
@@ -35,7 +34,7 @@ const Jokbal = [
     },
     {
         img: BanBan,
-        name: 'Half Spicy/Mild Trotters',
+        name: '반반족발',
         priceS: 34.99,
         priceM: 39.99,
         priceL: 44.99,

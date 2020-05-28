@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Jokbal from '../menuitems/jokbal'
-import { Paper } from '@material-ui/core'
+import { Paper,Fab} from '@material-ui/core'
 import Bossam from '../menuitems/bossam'
 import sideMenu from '../menuitems/sideMenu'
 import setMenu from '../menuitems/setMenu'
+import { IoIosClose, IoIosCart, IoMdCart } from 'react-icons/io'
 import '../items.scss'
 import './components.scss'
 import { Button } from 'react-bootstrap';
@@ -17,9 +18,11 @@ import {
 
 const MenuItemFormat = (props) =>{
     const { formatValue } = props
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = useState(false);
+    const [productIndex, setProductIndex] = useState(0);
 
-    const handleOpen = () => {
+    const handleOpen = (i) => {
+        setProductIndex(i);
         setOpen(true);
     }
     const handleClose = () => {
@@ -37,7 +40,7 @@ const MenuItemFormat = (props) =>{
                             <img src={element.img} alt={element.name}/>
                             <div className='pic-overlay text'>{element.name}</div>
                             <div>
-                            <Button variant='secondary' className='pic-overlay button' onClick={handleOpen}>
+                            <Button variant='secondary' className='pic-overlay button' onClick={() => handleOpen(index)}>
                                  <div className='button-text'>
                                      주문하기
                                  </div>
@@ -53,7 +56,23 @@ const MenuItemFormat = (props) =>{
                             >
                              <Fade in={open} className="fadeStyle">
                                     <div>
-                                   <Paper elevation={3} className="paperStyle">주문하기</Paper>
+                                   <Paper elevation={3} className="paperStyle" >
+                                   <IoIosClose className="xButton" onClick={() => setOpen(false)}/> 
+                                       <div className="imgBox">
+                                           <img src={Jokbal[productIndex].img}></img>
+                                           <Button variant='secondary' className="cartContainer" onClick={() => setOpen(false)}>
+                                            <IoIosCart className="cart" />
+                                           <p className="cartText"> Add To Cart</p>
+                                           </Button>
+                                       </div>
+                                        <div className="textBox">
+                                        <p style={{fontSize:'50pt'}}>{Jokbal[productIndex].name}</p>
+                                        <p className="smFont">{Jokbal[productIndex].description}</p>
+                                        <p className="lgFont">S: ${Jokbal[productIndex].priceS}</p>
+                                        <p className="lgFont">M: ${Jokbal[productIndex].priceM}</p>
+                                        <p className="lgFont">L: ${Jokbal[productIndex].priceL}</p>
+                                        </div>
+                                   </Paper>
                                     </div>
                                 </Fade>
                             </Modal>
