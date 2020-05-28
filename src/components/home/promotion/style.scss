@@ -1,13 +1,23 @@
 .promotion-container {
-  display: inline;
+  display: flex;
+  justify-content: center;
+}
+
+.promotion-picture-container {
+}
+
+.promotion-picture-container img {
+  width: 20em;
+  height: 20em;
+  object-fit: cover;
+  object-position: 0 80%;
+  z-index: 1;
 }
 
 .promotion-container .jumbotron {
   display: flex;
   z-index: 2;
   position: relative;
-  left: 30em;
-  top: 20em;
   padding: 0;
   align-items: center;
   height: 20em;
@@ -39,5 +49,27 @@
 }
 
 .promotion-picture-container {
-  position: relative;
+}
+
+.promotion-container .carousel-container {
+  z-index: 0;
+  flex: none;
+}
+
+.promotion-container .carousel-container .carousel-item {
+  flex: none;
+}
+
+.promotion-container .promotion-text {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.carousel-container img {
+  width: 50em;
+  object-fit: cover;
+  object-position: 0 80%;
+  height: 40em;
 }
