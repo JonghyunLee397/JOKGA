@@ -4,10 +4,14 @@ import {
   CarouselItem,
 } from 'react-bootstrap'
 import jokbal from '../images/jokbal.jpg'
-import bossam from '../images/bossam.jpg'
+import jokbal1 from '../images/jokbal1.jpg';
+import jokbal2 from '../images/jokbal2.jpg';
+import bossam1 from '../images/bossam1.jpg';
+
 import chickenfeet from '../images/chickenfeet.jpg'
 import CarouselCaption from 'react-bootstrap/CarouselCaption'
-import './style.scss'
+import './style.scss';
+import '../../../fonts/DXNewDay.ttf';
 
 const ImageCarousel = () => {
   const [index, setIndex] = useState(0)
@@ -27,36 +31,39 @@ const ImageCarousel = () => {
           <img
             alt='jokbal'
             className='picture'
-            src={jokbal}
+            src={jokbal1}
           />
           <CarouselCaption
             className='caption'
           >
-            <h1>네티즌 맛집 신정!</h1>
+            <h1>방금 삶아 따뜻하게</h1>
+            <h2>먹는 족발보쌈</h2>
           </CarouselCaption>
         </CarouselItem>
         <CarouselItem>
           <img
             alt='chicken feet'
             className='picture'
-            src={chickenfeet}
+            src={jokbal2}
           />
           <CarouselCaption
             className='caption'
           >
-            <h1>좃나 맛있음</h1>
+            <h1>방금 삶아 따뜻하게</h1>
+            <h2>먹는 족발보쌈</h2>
           </CarouselCaption>
         </CarouselItem>
         <CarouselItem>
           <img
             alt='bossam'
             className='picture'
-            src={bossam}
+            src={bossam1}
           />
           <CarouselCaption
             className='caption'
           >
-            <h1>test</h1>
+            <h1>방금 삶아 따뜻하게</h1>
+            <h2>먹는 족발보쌈</h2>
           </CarouselCaption>
         </CarouselItem>
       </Carousel>
