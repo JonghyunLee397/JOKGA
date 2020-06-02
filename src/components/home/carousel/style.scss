@@ -1,9 +1,30 @@
 .picture {
   width: 100%;
+  object-fit: cover;
+  object-position: 0 40%;
+  height: 60em;
 }
 
 .caption h1 {
-  font-family: 'East Sea Dokdo', cursive;
-  font-size: 100px;
+  font-family: 'DXNewDay';
+  font-size: 10em;
   padding-bottom: 50px;
+  position: relative;
+  bottom: 0.5em;
+  left: 4.5em;
+  text-align: left;
+}
+
+.caption h2 {
+  font-family: 'DXNewDay';
+  font-size: 10em;
+  text-align: left;
+  position: relative;
+  bottom: 0.5em;
+  left: 4.5em;
+}
+
+@font-face {
+  font-family: 'DXNewDay';
+  src: local('DXNewDay'), url('../../../fonts/DXNewDay.ttf') format('truetype')
 }
